@@ -31,7 +31,7 @@ function SendPost(a,b,c) {
 	http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 	http.onreadystatechange = function() {
 		if(http.readyState == 4 && http.status == 200) {
-			alert(http.responseText);
+			c(http.responseText);
 		}
 	}
 	http.send(params);
@@ -49,6 +49,6 @@ function SendForm() {
 	
 	var url = getid("LoginForm").getAttribute("action");
 	var data = form.toFormurl();
-	console.log(url,data,console.log);
+	SendPost(url,data,console.log);
 }
 </script>
