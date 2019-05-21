@@ -1,10 +1,11 @@
 <div id="box">
 	<img id="logo" src="https://cdn.hosting-ssl.ml/image/logo.png">
+	<p id="title">Hosting SSL</p>
 	<form id="LoginForm" action="https://cpanel.hosting-ssl.ml/login.php" method="post" target="frame">
-		<p><span>Username: </span><input type="text" name="uname" placeholder="username"></p>
-		<p><span>Password: </span><input type="password" name="passwd" placeholder="password"></p>
+		<p><span>Username: </span><input type="text" name="uname" placeholder="username" class="input"></p>
+		<p><span>Password: </span><input type="password" name="passwd" placeholder="password" class="input"></p>
 		<input type="hidden" name="submit" value="Login">
-		<input type="submit" value="Login">
+		<input type="submit" value="Login" id="login">
 	</form>
 </div>
 <style>
@@ -46,6 +47,39 @@
     top: 64px;
     left: 64px;
 	color: #FFF;
+}
+#title {
+    position: absolute;
+    left: 90px;
+    color: #FFF;
+    font-family: OpenBoldItalic;
+    font-size: 16px;
+    background-color: #009688;
+    padding: 8px;
+    border-radius: 50%;
+    top: 7px;
+}
+.input {
+    border: 0px;
+    border-radius: 1px;
+    font-family: OpenBold;
+    color: #FFF;
+    background-color: transparent;
+    padding: 4px;
+    font-size: 12px;
+    margin: 0px;
+}
+span {
+    font-family: OpenBold;
+    font-size: 12px;
+}
+#login {
+    border: 0px;
+    border-radius: 2px;
+    font-family: OpenBold;
+    padding: 4px;
+    background-color: #607D8B;
+    color: #FFF;
 }
 </style>
 <iframe id="frame" name="frame" src="about:blank" style="visibility: hidden;"></iframe>
