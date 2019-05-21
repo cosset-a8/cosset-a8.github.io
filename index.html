@@ -4,4 +4,10 @@
 	<input type="hidden" name="submit" value="Login">
 	<input type="submit" value="Login">
 </form>
-<iframe name="MyFrame" src="about:blank"></iframe>
+<iframe id="MyFrame" name="MyFrame" src="about:blank"></iframe>
+<script>
+	var frame = document.getElementById("MyFrame");
+	frame.onload = function() {
+		console.log("load...");
+	}
+</script>
