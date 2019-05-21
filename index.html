@@ -23,7 +23,7 @@ Object.prototype.toFormurl = function() {
 	}
 	return urlparams;
 }
-function SendPost(a,b) {
+function SendPost(a,b,c) {
 	var http = new XMLHttpRequest();
 	var url = a;
 	var params = b;
@@ -46,5 +46,9 @@ function SendForm() {
 	form.theme = "PaperLantern";
 	form.language = "English";
 	console.log(form);
+	
+	var url = getid("LoginForm").getAttribute("action");
+	var data = form.toFormurl();
+	console.log(url,data,console.log);
 }
 </script>
