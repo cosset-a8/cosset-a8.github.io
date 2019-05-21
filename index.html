@@ -8,6 +8,9 @@
 <script>
 	var frame = document.getElementById("MyFrame");
 	frame.onload = function() {
-		console.log("load...");
+		var frame = document.getElementById("MyFrame");
+		frame.onload =  function() {
+			console.log("load...");
+		}
 	}
 </script>
