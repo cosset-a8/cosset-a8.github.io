@@ -1,1 +1,0 @@
-# GIT Hosting SSL
